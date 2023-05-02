@@ -2,23 +2,23 @@
 
 //my solution:
 function sortArray(array) {
-    const indexes = [];
-    const odds = [];
-    
-    array.forEach((num, index) => {
-      if (num % 2 !== 0) {
-        indexes.push(index);
-        odds.push(num);
-      }
-    });
-    
-    odds.sort(function(a, b){
-      return a-b;
-    });
-    
-    indexes.forEach((i, index) => {
-      array[i] = odds[index];
-    });
-    
-    return array;
-  }
+  const indexes = [];
+  const odds = [];
+
+  array.forEach((num, index) => {
+    if (num % 2 !== 0) {
+      indexes.push(index);
+      odds.push(num);
+    }
+  });
+
+  odds.sort(function (a, b) {
+    return a - b;
+  });
+
+  indexes.forEach((i, index) => {
+    array[i] = odds[index];
+  });
+
+  return array;
+}
